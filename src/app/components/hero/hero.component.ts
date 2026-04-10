@@ -1,0 +1,19 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { PortfolioDataService } from '../../models/portfolio-data.service';
+
+@Component({
+  selector: 'app-hero',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.scss']
+})
+export class HeroComponent {
+  profile = this.data.profile;
+  constructor(public data: PortfolioDataService) {}
+
+  scrollTo(id: string): void {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  }
+}

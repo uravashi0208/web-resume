@@ -1,0 +1,22 @@
+<section class="services section-block" id="services">
+  <div class="section-header">
+    <span class="section-tag">What I Offer</span>
+    <h2 class="section-title">Services &amp;<br><em>Expertise</em></h2>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card" *ngFor="let s of services; let i = index">
+      <div class="service-num">0{{i + 1}}</div>
+      <div class="service-icon">
+        <i class="fas {{s.icon}}"></i>
+      </div>
+      <h3 class="service-title">{{s.title}}</h3>
+      <p class="service-desc">{{s.description}}</p>
+      <ul class="service-features">
+        <li *ngFor="let f of s.features">
+          <i class="fas fa-check"></i> {{f}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

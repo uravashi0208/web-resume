@@ -1,0 +1,32 @@
+<section class="portfolio section-block" id="portfolio">
+  <div class="section-header">
+    <span class="section-tag">My Work</span>
+    <h2 class="section-title">Selected<br /><em>Portfolio</em></h2>
+  </div>
+
+  <div class="portfolio-list">
+    <div class="portfolio-item" *ngFor="let item of items; let i = index">
+      <div class="item-index">0{{ i + 1 }}</div>
+      <div class="item-info">
+        <span class="item-category">{{ item.category }}</span>
+        <h3 class="item-title">{{ item.title }}</h3>
+        <p class="item-desc">{{ item.description }}</p>
+      </div>
+      <div class="item-img">
+        <img [src]="item.image" [alt]="item.title" />
+        <div class="img-overlay">
+          <a [href]="item.link" class="view-btn">
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GitHub CTA -->
+  <div class="github-cta">
+    <i class="fab fa-github"></i>
+    <span>More projects on</span>
+    <a href="https://github.com" target="_blank">GitHub <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
