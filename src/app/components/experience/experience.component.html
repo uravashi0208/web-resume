@@ -1,0 +1,48 @@
+<section class="experience section-block" id="experience">
+  <div class="section-header">
+    <span class="section-tag">Work History</span>
+    <h2 class="section-title">Professional<br><em>Experience</em></h2>
+  </div>
+
+  <div class="exp-layout">
+    <!-- Company tabs -->
+    <div class="exp-tabs">
+      <button
+        class="exp-tab"
+        *ngFor="let exp of experiences; let i = index"
+        [class.active]="activeIndex === i"
+        (click)="setActive(i)"
+      >
+        <span class="tab-company">{{exp.company}}</span>
+        <span class="tab-period">{{exp.period}}</span>
+      </button>
+    </div>
+
+    <!-- Active experience detail -->
+    <div class="exp-detail" *ngIf="experiences[activeIndex] as exp">
+      <div class="exp-detail-header">
+        <div>
+          <h3 class="exp-role">{{exp.role}}</h3>
+          <p class="exp-meta">
+            <i class="fas fa-building"></i> {{exp.company}}
+            <span class="sep">·</span>
+            <i class="fas fa-map-marker-alt"></i> {{exp.location}}
+            <span class="sep">·</span>
+            <i class="fas fa-calendar-alt"></i> {{exp.period}}
+          </p>
+        </div>
+      </div>
+
+      <ul class="exp-bullets">
+        <li *ngFor="let point of exp.description">
+          <span class="bullet-icon"><i class="fas fa-chevron-right"></i></span>
+          {{point}}
+        </li>
+      </ul>
+
+      <div class="tech-stack">
+        <span class="tech-badge" *ngFor="let t of exp.tech">{{t}}</span>
+      </div>
+    </div>
+  </div>
+</section>

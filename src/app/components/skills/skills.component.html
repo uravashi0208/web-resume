@@ -1,0 +1,51 @@
+<section class="skills section-block" id="skills">
+  <div class="section-header">
+    <span class="section-tag">Technical Arsenal</span>
+    <h2 class="section-title">Skills &amp;<br><em>Technologies</em></h2>
+  </div>
+
+  <div class="skills-grid">
+    <div class="skill-category" *ngFor="let cat of skillCategories">
+      <div class="cat-header">
+        <div class="cat-icon">
+          <i class="fas {{cat.icon}}"></i>
+        </div>
+        <h3 class="cat-title">{{cat.category}}</h3>
+      </div>
+      <div class="skill-tags">
+        <span class="skill-tag" *ngFor="let skill of cat.skills">{{skill}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="certifications">
+    <div class="cert-item">
+      <i class="fab fa-github"></i>
+      <div>
+        <strong>Career Essentials in GitHub Professional Certificate</strong>
+        <span>GitHub · LinkedIn Verified</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <i class="fab fa-angular"></i>
+      <div>
+        <strong>LinkedIn Skill Assessment: Angular</strong>
+        <span>Passed · Endorsed</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <i class="fab fa-node-js"></i>
+      <div>
+        <strong>LinkedIn Skill Assessment: Node.js</strong>
+        <span>Passed · Endorsed</span>
+      </div>
+    </div>
+    <div class="cert-item">
+      <i class="fas fa-code"></i>
+      <div>
+        <strong>LinkedIn Skill Assessment: CSS &amp; PHP</strong>
+        <span>Passed · Multiple Endorsements</span>
+      </div>
+    </div>
+  </div>
+</section>

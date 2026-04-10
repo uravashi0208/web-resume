@@ -1,0 +1,25 @@
+<nav class="navbar" [class.menu-open]="menuOpen">
+  <!-- Mobile toggle -->
+  <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen">
+    <span class="bar" [class.open]="menuOpen"></span>
+    <span class="bar" [class.open]="menuOpen"></span>
+    <span class="bar" [class.open]="menuOpen"></span>
+  </button>
+
+  <!-- Desktop sidebar / Mobile dropdown -->
+  <div class="nav-inner" [class.open]="menuOpen">
+    <div class="nav-brand">UV</div>
+    <ul class="nav-list">
+      <li *ngFor="let item of navItems">
+        <a
+          class="nav-link"
+          [class.active]="activeSection === item.id"
+          (click)="scrollTo(item.id)"
+        >
+          <span class="nav-icon"><i class="fas {{item.icon}}"></i></span>
+          <span class="nav-label">{{item.label}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
