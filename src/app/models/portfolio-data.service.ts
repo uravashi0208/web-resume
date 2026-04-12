@@ -361,10 +361,10 @@ export class PortfolioDataService {
       link: 'https://www.foxlyme.com/',
     },
     {
-      category: 'React · E-Commerce',
-      title: 'Fruits App — React E-Commerce Demo',
+      category: 'React · E-Commerce · Node.js · Full-Stack',
+      title: 'Vegefoods — Full-Stack E-Commerce Platform',
       description:
-        'A clean, responsive e-commerce React application showcasing product listing, cart management, and dynamic filtering. Demonstrates React hooks, component architecture, and state management best practices. Deployed on Vercel with optimized build pipeline for fast load performance.',
+        'A production-grade e-commerce platform built end-to-end — React 18 customer storefront, complete admin dashboard with analytics, and a Node.js REST API backed by Firebase Firestore. Integrates Stripe, PayPal, and Google Pay payment flows with dual JWT authentication for customers and admins. Features background cron jobs for cart abandonment recovery, Cloudinary media uploads, and 22 service-layer modules covering products, orders, users, blogs, newsletters, and reviews. Deployed on Vercel.',
       tech: ['React', 'React Hooks', 'TypeScript', 'CSS3', 'Vercel'],
       image: 'assets/img/vegafoods.png',
       link: 'https://fruitsapp-one.vercel.app/',
